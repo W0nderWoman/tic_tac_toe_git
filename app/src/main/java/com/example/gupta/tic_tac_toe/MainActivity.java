@@ -17,7 +17,7 @@ public class MainActivity extends Activity {
     }
     public void start_game(View view)
     {
-        Intent i=new Intent(this,game.class);
+        Intent in=new Intent(this,game.class);
         final EditText p1=(EditText) findViewById(R.id.text_play1);
         String p1name=p1.getText().toString();
         final EditText p2=(EditText) findViewById(R.id.text_play2);
@@ -27,10 +27,10 @@ public class MainActivity extends Activity {
             Toast.makeText(this,"Enter names of both the players !",Toast.LENGTH_LONG).show();
         }
         else {
-            i.putExtra("player1name", p1name);
-            i.putExtra("player2name", p2name);
+            in.putExtra("player1name", p1name);
+            in.putExtra("player2name", p2name);
             finish();
-            startActivity(i);
+            startActivity(in);
         }
     }
 }
